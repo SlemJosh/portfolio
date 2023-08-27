@@ -5,5 +5,5 @@
 header {
 display: flex;
 justify-content: space-between;
-
+background-image: url(assets/background.jpg);
 }
