@@ -5,8 +5,11 @@
     --bookend: #9B2335;
     /*Wanted the header and footer to have the same color, also so they start and end the page*/
     --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
-}
 
+}
+*{
+    box-sizing: border-box;
+}
 /*Needed a background color that was easy on the eyes. White and Black are the most common background colors, but figured a light blue would be easy on the eyes regardless of the light/dark themes.*/
 body {
     background-color: #5D8AA8;
@@ -16,15 +19,29 @@ body {
 
 }
 
-h1{
-    text-indent: 20px;/*Wanted our title to not be right up against the side*/
+h1 {
+    text-indent: 20px;
+    /*Wanted our title to not be right up against the side*/
+    text-shadow: #FC0 1px 0 10px;
 }
-h1,h2,h3 {
-    
+
+h1,
+h2,
+h3 {
+
     font-family: var(--font-theme);
+   
     /*Wanted our title to not be right up against the side*/
 }
 
+h3 {
+    color: white;
+    font-weight: bolder;
+}
+
+span {
+    text-shadow: #FC0 1px 0 10px;
+}
 
 /*Our header needs a lot of work.  Along with the name of the page, wanted the navigation buttons on the same line, but opposite sides of the page. */
 header {
@@ -38,14 +55,14 @@ header {
     background-color: var(--bookend);
 }
 
-
-nav a {
+.navigation a {
     text-decoration-style: solid;
     font-size: x-large;
     /* wanted our text to be somewhat proportional to the h1 header*/
     margin: 10px;
     /*added so that there is space inbetween the links*/
     font-family: var(--font-theme);
+    text-shadow: #FC0 1px 0 10px;
 }
 
 /*Didn't want the standard link colors being blue and purple, so with the next two we are able to change those to colors and even styles we want.*/
@@ -59,6 +76,7 @@ a:visited {
 
 a:hover {
     color: white;
+    cursor: grab;
 }
 
 a:active {
@@ -70,21 +88,148 @@ a:active {
     height: 125px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/woods.jpg");/*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
+    background-image: url("../images/woods.jpg");
+    /*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
     background-size: cover;
     background-position: center;
-    position: relative; /*These 3 lines let us decide how and where we want the text to be displayed*/
+    position: relative;
+    /*These 3 lines let us decide how and where we want the text to be displayed*/
     text-align: center;
     color: white;
 }
+
 /*This is where we actually get to decide the paramaters for our subtitle. we have some positioning already set thanks to the .hero class, but we need to tell it where in relation to the banner of where to go*/
 .subtitle {
     position: absolute;
     bottom: 8px;
-    right:16px;
+    right: 16px;
     font-family: var(--font-theme);
-    font-weight: bolder;   /*A couple tweeks just so the sizing is bigger and more readable*/
+    font-weight: bolder;
+    /*A couple tweeks just so the sizing is bigger and more readable*/
     font-size: larger;
+
+}
+main {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    float: left;
+    flex: 1;
+    padding: 80px;
+    text-align: center;
+    
+}
+
+h2{
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 3px solid var(--bookend);
+   
+    line-height: 1.1;
+
+}
+
+#profile-pic {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+
+}
+
+.aboutme {
+        border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 0 0 400px;
+   
+
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+
+.flex-item {
+    border: 5px solid var(--tertiary);
+    color: var(--primary);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 2em);
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 120%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+}
+
+.flex-item:first-child {
+    min-height: 350px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.flex-item div {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 10px;
+
+}
+
+.flex-item h3 {
+    font-size: 1.6rem;
+}
+
+.work1 {
+    background-image: url(../images/horiseonpage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work2 {
+    background-image: url(../images/preworkstudyguide.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work3 {
+    background-image: url(../images/construction.jpg);
+    /*<a href="https://www.freepik.com/free-vector/website-construction-background_4664910.htm">Image by BiZkettE1</a> on Freepik*/
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-decoration: solid;
+}
+
+.work4 {
+    background-image: url(../images/coming.jpg);
+    /*<a href="https://www.vecteezy.com/free-vector/coming-soon">Coming Soon Vectors by Vecteezy</a>*/
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#address {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-theme);
+    text-shadow: #FC0 1px 0 10px;
+    text-decoration-style: solid;
+    font-size: x-large;
+    margin: 100px;
+    gap: 50px;
 
 }
 
@@ -93,4 +238,106 @@ footer {
     text-align: center;
     background-color: var(--bookend);
     margin-top: auto;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+
+
+
+
+
+
+
+
+/*
+.topics {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+/*
+.topics h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 3px solid var(--bookend);
+    font-size: 4vw;
+    line-height: 1.1;
+}
+
+
+#about,
+#work,
+#contact {
+    justify-content: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-theme);
+}
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*
+
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .page-section>h2,
+    .page-section>div {
+        flex: 0 0 100%;
+    }
+
+    .page-section>h2 {
+        border-right: none;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: 7vw;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .flex-item,
+    .flex-item:first-child {
+        flex-basis: 100%;
+    }
+
+    .flex-item:first-child {
+        min-height: 150px;
+    }
+
+    .hero-banner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

@@ -12,76 +12,97 @@
 <body>
     <!--Our header will consist of a name for the page and a navigation bar to the right with working links to the rest of the page-->
     <header class="main-header">
-        
+
         <h1>Joshua Slem's Portfolio</h1>
-        <img src="assets/images/bearpawred.png" height="100px" alt="Bear Paw">
-        
-        <nav>
-            <a href="about">About Me</a>
-            <a href="work">My Work</a>
-            <a href="contact">Contact Me</a>
+        <a href="https://generatorfun.com/random-bear-image"><img src="assets/images/bearpawred.png" height="100px"
+                alt="Bear Paw"></a>
+
+        <nav class="navigation">
+            <a href="#about">About Me</a>
+            <a href="#work">My Work</a>
+            <a href="#contact">Contact Me</a>
         </nav>
     </header>
 
-    <section>
+    <section class="hero">
         <!--A banner below the header with the subtitle. I liked the way it looked on the example and wanted my own-->
-        <div class="hero">
-            <div class="subtitle">Productivity From Passion</div>
-            <!--Wanted to put a subtitle in the bottom right of the banner-->
+        <div class="subtitle">Productivity From Passion</div>
+        <!--Wanted to put a subtitle in the bottom right of the banner-->
         </div>
     </section>
-
+    <!-- Body of the page -->
     <main>
-        <!--The entire about me section.  Chose against doing side by side.-->
-        <section>
-            <h2>About Me</h2>
-            <p>
-                I received my first computer back in 1996. At the time I was just a kid who knew that with this box, I
-                could unlock a whole new world of gaming. I was obsessed. Whether it be doing extra chores and working
-                to afford peripheals or asking for specific computer parts as birthday presents, I was hooked. Along
-                with that passion for pc gaming, I started delving into the world wide web, and it wouldn't be too long
-                before I was enamored by the wealth of information right at my very fingertips. I was well ahead of
-                those around me in terms of knowing how to use computers, and I had a hint that it would someday be the
-                very thing that I did for a living. </p>
+        <!--The entire about me section.  Chose against doing side by side. It seemed like it would work in the wireframe, but it's more precise and organized to just keep content with the header for that content.-->
+        <section class="topics" id="about">
+            <aside>
+                <h2>About Me</h2>
+            </aside>
+            <div class="aboutme">
+                <p><img src="assets/images/codingbear.jpg" img id="profile-pic" alt="A bear in class">
+                    It started as a passion for gaming. Ever since my first computer in 1996, I wanted to be on it all
+                    the
+                    time gaming. As I grew more familiar with the internet and all it had to offer, it only begged
+                    for more attention from me. Whilst in highschool even looked at procuring some of the skills to turn
+                    this box of joy into a box of productivity. Stumbled along the way and again in college looked
+                    at getting more of those skills to pay the bills. Life once again interrupted, but not before I had
+                    a
+                    chance to really sample some of the basics of what makes up a computer science degree. Now I'm fully
+                    invested in a coding bootcamp, where I can focus on the work itself and finally fulfill my goal of
+                    becoming a software developer/engineer in the near future.<br><br><strong>
+                        <center>Below I've included some of my more recent works,
+                            and hope to populate this page with even more as I complete them.</p></strong></center>
 
-            <p>
-                Fast forward many years, and while I don't work in the computer industry, they are very much involved in
-                my everyday life. About 10 years ago, I went to get my associates degree and took a few computer courses
-                along the way. While I got the associates degree, life got real busy, and I never managed to finish what
-                I
-                thought was going to turn into me getting a bachelors degree in computer science and turning my hobby
-                into
-                my career. That's all about to change.
+                </p>
 
-            </p>
-            <p>
-                I've always jokingly said things like, "someday I'm gonna make a program that does that,"" or "wouldn't
-                all this be easier if there was an app that would do that?" Now I'm fully invested into a coding
-                bootcamp
-                where I hope to pick up the tools and knowledge in order to become a succesful software developer. I've
-                only
-                just started but this page will help you see my progress and see if I am the right fit for you.
-            </p>
+            </div>
         </section>
         <!--My Work section.  Including images and links to previous and future projects-->
-        <section>
-            <h2 id="work">My Work</h2>
-            <ul>
-                <li><a href="slemjosh.github.io/horiseon/">Prework Study Guide</a></li>
-                <li><a href="https://slemjosh.github.io/prework-study-guide/">Horiseon</a></li>
-                <li>Under Construction</li>
-                <li>Coming Soon</li>
-            </ul>
+        <section class="topics" id="work">
+            <aside>
+                <h2>My Work</h2>
+            </aside>
+            <nav class="projects">
+                <a href="http://slemjosh.github.io/horiseon/" target="_blank" class="flex-item work1">
+                    <div>
+                        <h3>Horiseon Webpage</h3>
+                        <span>Social Solutions Services</span>
+                    </div>
+                </a>
+
+                <a href="https://slemjosh.github.io/prework-study-guide/" target="_blank" class="flex-item work2">
+                    <div>
+                        <h3>Pre-Work Study Guide</h3>
+                        <span>Notetaking for students</span>
+                    </div>
+                </a>
+
+                <a href="top" class="flex-item work3">
+                    <div>
+                        <h3>Project Under Construction</h3>
+                        <span>Check Back Soon</span>
+                    </div>
+                </a>
+                <a href="top" class="flex-item work4">
+                    <div>
+                        <h3>Coming Soon</h3>
+                        <span>Be Prepared</span>
+                    </div>
+                </a>
+
+            </nav>
         </section>
         <!--The Contact me section will contain some real and some fake contact information. -->
-        <section>
-            <h2 id="contact">Contact Me</h2>
-            <ul>
-                <li>Fake Phone Number</li>
-                <li><a href="mailto:joshua.slem@gmail.com">Email Me</a></li>
-                <li><a href="https://github.com/SlemJosh">GitHub</a></li>
-                <li><a href="https://raider.io/characters/us/area-52/Grayclaw">Raider IO score</a></li>
-            </ul>
+        <section class="topics" id="contact">
+            <aside>
+                <h2>Contact Me</h2>
+            </aside>
+            <nav id="address">
+                <a href="tel:+NotARealPhoneNumber">Call Me @ 867-5309</a>
+                <a href="mailto:joshua.slem@gmail.com">Email Me</a>
+                <a href="https://github.com/SlemJosh">GitHub</a>
+                <a href="https://raider.io/characters/us/area-52/Grayclaw">Gamer</a>
+            </nav>
+
         </section>
     </main>
     <!--Our Footer will just be a built by message and a link to go back up to the top.-->
