@@ -1,9 +1,41 @@
-*{
-    box-sizing: border-box;
+/*Style CSS File*/
+
+/*First thing is a place to state our variables*/
+:root {
+    --bookend: #9B2335;
+    /*Wanted the header and footer to have the same color, also so they start and end the page*/
+    --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
 }
 
+/*Needed a background color that was easy on the eyes. White and Black are the most common background colors, but figured a light blue would be easy on the eyes regardless of the light/dark themes.*/
+body {
+    background-color: #5D8AA8;
+    min-height: 100vh;  /*I wanted my footer to be at the end of the page with no space below it, so we needed to set the pages height to a variable known as the viewport. We want to fill the entire viewed section*/
+    display: grid;
+
+}
+
+/*Our header needs a lot of work.  Along with the name of the page, wanted the navigation buttons on the same line, but opposite sides of the page. */
 header {
-display: flex;
-justify-content: space-between;
-background-image: url(assets/background.jpg);
+    font-family: var(--font-theme);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*This makes it so that our links will shift to the bottom of the header in case of smaller screens/mobile browsers.*/
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bookend);
+}
+
+nav a {
+    font-size: x-large;  /* wanted our text to be somewhat proportional to the h1 header*/
+    margin: 10px; /*added so that there is space inbetween the links*/
+    font-family: var(--font-theme);
+}
+
+footer {
+    font-family: var(--font-theme);
+    text-align: center;
+    background-color: var(--bookend);
+    margin-top: auto;
 }
