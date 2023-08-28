@@ -10,10 +10,21 @@
 /*Needed a background color that was easy on the eyes. White and Black are the most common background colors, but figured a light blue would be easy on the eyes regardless of the light/dark themes.*/
 body {
     background-color: #5D8AA8;
-    min-height: 100vh;  /*I wanted my footer to be at the end of the page with no space below it, so we needed to set the pages height to a variable known as the viewport. We want to fill the entire viewed section*/
+    min-height: 100vh;
+    /*I wanted my footer to be at the end of the page with no space below it, so we needed to set the pages height to a variable known as the viewport. We want to fill the entire viewed section*/
     display: grid;
 
 }
+
+h1{
+    text-indent: 20px;/*Wanted our title to not be right up against the side*/
+}
+h1,h2,h3 {
+    
+    font-family: var(--font-theme);
+    /*Wanted our title to not be right up against the side*/
+}
+
 
 /*Our header needs a lot of work.  Along with the name of the page, wanted the navigation buttons on the same line, but opposite sides of the page. */
 header {
@@ -27,10 +38,54 @@ header {
     background-color: var(--bookend);
 }
 
+
 nav a {
-    font-size: x-large;  /* wanted our text to be somewhat proportional to the h1 header*/
-    margin: 10px; /*added so that there is space inbetween the links*/
+    text-decoration-style: solid;
+    font-size: x-large;
+    /* wanted our text to be somewhat proportional to the h1 header*/
+    margin: 10px;
+    /*added so that there is space inbetween the links*/
     font-family: var(--font-theme);
+}
+
+/*Didn't want the standard link colors being blue and purple, so with the next two we are able to change those to colors and even styles we want.*/
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: yellow;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: gray;
+}
+
+/*Here is the image for the banner*/
+.hero {
+    height: 125px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/woods.jpg");/*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
+    background-size: cover;
+    background-position: center;
+    position: relative; /*These 3 lines let us decide how and where we want the text to be displayed*/
+    text-align: center;
+    color: white;
+}
+/*This is where we actually get to decide the paramaters for our subtitle. we have some positioning already set thanks to the .hero class, but we need to tell it where in relation to the banner of where to go*/
+.subtitle {
+    position: absolute;
+    bottom: 8px;
+    right:16px;
+    font-family: var(--font-theme);
+    font-weight: bolder;   /*A couple tweeks just so the sizing is bigger and more readable*/
+    font-size: larger;
+
 }
 
 footer {
