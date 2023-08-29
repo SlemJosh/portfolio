@@ -3,13 +3,10 @@
 /*First thing is a place to state our variables*/
 :root {
     --bookend: #9B2335;
-    /*Wanted the header and footer to have the same color, also so they start and end the page*/
     --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
 
 }
-*{
-    box-sizing: border-box;
-}
+
 /*Needed a background color that was easy on the eyes. White and Black are the most common background colors, but figured a light blue would be easy on the eyes regardless of the light/dark themes.*/
 body {
     background-color: #5D8AA8;
@@ -20,28 +17,25 @@ body {
 }
 
 h1 {
-    text-indent: 20px;
+    margin-left: 20px;
     /*Wanted our title to not be right up against the side*/
     text-shadow: #FC0 1px 0 10px;
 }
 
 h1,
-h2,
-h3 {
-
+h3,
+h4 {
+    color: black;
     font-family: var(--font-theme);
-   
-    /*Wanted our title to not be right up against the side*/
+    text-shadow: #FC0 1px 0 10px;
+
 }
 
-h3 {
-    color: white;
-    font-weight: bolder;
-}
-
-span {
+.topicTitle {
+    font-family: var(--font-theme);
     text-shadow: #FC0 1px 0 10px;
 }
+
 
 /*Our header needs a lot of work.  Along with the name of the page, wanted the navigation buttons on the same line, but opposite sides of the page. */
 header {
@@ -55,14 +49,14 @@ header {
     background-color: var(--bookend);
 }
 
-.navigation a {
+nav a {
     text-decoration-style: solid;
     font-size: x-large;
     /* wanted our text to be somewhat proportional to the h1 header*/
-    margin: 10px;
+    margin-right: 20px;
     /*added so that there is space inbetween the links*/
     font-family: var(--font-theme);
-    text-shadow: #FC0 1px 0 10px;
+    
 }
 
 /*Didn't want the standard link colors being blue and purple, so with the next two we are able to change those to colors and even styles we want.*/
@@ -107,45 +101,39 @@ a:active {
     font-weight: bolder;
     /*A couple tweeks just so the sizing is bigger and more readable*/
     font-size: larger;
+    text-shadow: #FC0 1px 0 10px;
 
 }
+
 main {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
-aside {
-    float: left;
-    flex: 1;
-    padding: 80px;
-    text-align: center;
-    
+.topics {
+    display: flex;
+    width: 75%;
 }
 
-h2{
+h2 {
+    font-family: var(--font-theme);
     flex: 0 0 20%;
     text-align: right;
     padding-right: 15px;
+    margin-left: 20px;
     border-right: 3px solid var(--bookend);
-   
+    font-size: 2vw;
     line-height: 1.1;
-
+    text-shadow: #FC0 1px 0 10px;
 }
+
 
 #profile-pic {
     float: left;
+    margin-left: 20px;
     width: 200px;
     height: 200px;
     margin-right: 20px;
-
-}
-
-.aboutme {
-        border-width: 1px;
-    border-radius: 10px;
-    padding: 10px;
-    flex: 0 0 400px;
-   
 
 }
 
@@ -154,8 +142,19 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
 
-    
+
 }
+
+
+.aboutme {
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 0 0 400px;
+
+
+}
+
 
 .flex-item {
     border: 5px solid var(--tertiary);
@@ -169,7 +168,7 @@ h2{
     margin: 0.5em;
     text-decoration: none;
     background-blend-mode: soft-light;
-    background-size: 120%;
+    background-size: 100%;
     transition: all 0.5s;
     font-size: 0.9rem;
 }
@@ -184,39 +183,39 @@ h2{
 }
 
 .flex-item div {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 8px 10px;
 
 }
 
-.flex-item h3 {
-    font-size: 1.6rem;
+.projects h3{
+    font-size: x-large;
+    color: white;
 }
-
 .work1 {
+    margin-left: 20px;
     background-image: url(../images/horiseonpage.png);
-    background-repeat: no-repeat;
     background-position: center;
 }
 
 .work2 {
+    margin-left: 20px;
     background-image: url(../images/preworkstudyguide.png);
-    background-repeat: no-repeat;
     background-position: center;
 }
 
 .work3 {
+    margin-left: 20px;
     background-image: url(../images/construction.jpg);
-    /*<a href="https://www.freepik.com/free-vector/website-construction-background_4664910.htm">Image by BiZkettE1</a> on Freepik*/
-    background-repeat: no-repeat;
-    background-position: center top;
+    /*<a href="https://www.vecteezy.com/free-vector/under-construction">Under Construction Vectors by Vecteezy</a>*/
+    background-position: center;
     text-decoration: solid;
 }
 
 .work4 {
+    margin-left: 20px;
     background-image: url(../images/coming.jpg);
     /*<a href="https://www.vecteezy.com/free-vector/coming-soon">Coming Soon Vectors by Vecteezy</a>*/
-    background-repeat: no-repeat;
     background-position: center;
 
 }
@@ -228,9 +227,13 @@ h2{
     text-shadow: #FC0 1px 0 10px;
     text-decoration-style: solid;
     font-size: x-large;
-    margin: 100px;
+    margin: 50px;
+    margin-left: 200px;
     gap: 50px;
-
+    
+}
+#address a{
+    color: black;
 }
 
 footer {
@@ -241,103 +244,3 @@ footer {
     text-shadow: #FC0 1px 0 10px;
 }
 
-
-
-
-
-
-
-
-
-/*
-.topics {
-    margin: 25px 0;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
-}
-/*
-.topics h2 {
-    flex: 0 0 20%;
-    text-align: right;
-    padding-right: 15px;
-    border-right: 3px solid var(--bookend);
-    font-size: 4vw;
-    line-height: 1.1;
-}
-
-
-#about,
-#work,
-#contact {
-    justify-content: flex;
-    flex-wrap: wrap;
-    font-family: var(--font-theme);
-}
-
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/*
-
-
-@media screen and (max-width: 980px) {
-    header {
-        padding: 0 0 10px 0;
-        justify-content: center;
-        text-align: center;
-    }
-
-    header h1 {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 10px;
-        font-size: 10vw;
-    }
-
-    header nav {
-        justify-content: center;
-    }
-
-    .page-section>h2,
-    .page-section>div {
-        flex: 0 0 100%;
-    }
-
-    .page-section>h2 {
-        border-right: none;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        text-align: left;
-        font-size: 7vw;
-    }
-}
-
-@media screen and (max-width: 760px) {
-
-    .flex-item,
-    .flex-item:first-child {
-        flex-basis: 100%;
-    }
-
-    .flex-item:first-child {
-        min-height: 150px;
-    }
-
-    .hero-banner {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .contact address {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
