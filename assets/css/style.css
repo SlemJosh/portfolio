@@ -23,13 +23,18 @@ body {
     font-family: var(--font-theme);
     text-shadow: #FC0 1px 0 10px;
     color: black;
-    /*display: flex;
-    flex-direction: column -edited out as they are conflicting */ min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
     justify-content: flex-start;
+    
     
 }
 
 /*Header*/
+
+/*In the header is where I was able to tell the navigation links to go to the right of the header, and how they were to be spaced from my actual heading.  I also was able to do some positioning on the text.  Here is where I put in the header/footer background color
+I also needed to tell this property to flex as well.*/
 
 header {
     display: flex;
@@ -116,5 +121,20 @@ main{
 /*About Me*/
 /*My Work*/
 /*Contact Me*/
+
+
+
 /*Footer*/
+
+/*Contrary to how you read these notes.  I actually worked on the Footer right after I finished the banner.  Figured I'd want to thave the start and begining done before I got into the middle.*/
+/*We wanted to play around with the text so we used a couple copy and paste codes for icons to be present in the goodbye image.  We also wanted to give some space between the top of our footer and the bottom of the previous section*/
+
+footer {
+    text-align: center;
+    background-color: var(--bookend);
+    margin-top: auto;
+    
+}
+
+
 /*Compatibility*/
