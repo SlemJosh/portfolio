@@ -1,6 +1,7 @@
 /*Style CSS File*/
 
 /*First thing is a place to state our variables*/
+
 :root {
     --bookend: #9B2335;
     --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
@@ -16,17 +17,20 @@
 /*Body*/
 /*First, we want to establish some basics.  I want the font to be simliar across all the text on the screen, so I first gave it a variable, and then applyy it in the body so that I don't have to redo it each time.  Added a shadow to that text.
 Put the min height to 100vh, where vh is the viewport height, aka I want it to take up the whole page. */
+
 body {
     background-color: #5d8AA8;
     font-family: var(--font-theme);
     text-shadow: #FC0 1px 0 10px;
+    color: black;
     /*display: flex;
-    flex-direction: column;*/
-    edited out as they are conflicting min-height: 100vh;
+    flex-direction: column -edited out as they are conflicting */ min-height: 100vh;
     justify-content: flex-start;
+    
 }
 
 /*Header*/
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -36,22 +40,79 @@ header {
 }
 
 /* First, we wanted to move the heading from the left some, so we put a margin there. */
+
 h1 {
     margin-left: 20px;
 
 }
 
 /*So first we need the navigation links to be displayed inline as opposed to stacked on eachother. Next we made some size and appearance changes.  Lastly we made it so they would come left from the right margin a bit.*/
+
 header nav a {
     display: inline;
     text-decoration: solid;
     font-size: x-large;
     margin-right: 20px;
+    
+}
 
+/*This is where we have our first links, so time to start styling those as well. Did this by using psuedo-class : to denote that after (said action) then this change is to be implemented. To start we have links turning yellow, from the original black. 
+We also have the cursor changing to a grab hand in addition to the link glowing white as you hover it.  As you click it the link itself will become gray.*/
+
+a:link{
+    color: black;
+
+}
+a:visited {
+    color: yellow;
+}
+
+a:hover {
+    color: white;
+    cursor: grab;
+}
+
+a:active {
+    color: gray;
 }
 
 /*Banner*/
+
+/*For our banner, we want two things. We want an image that goes across the top to have a break from the header and the main section of our page.  We also want a subtitle in that banner and position to the bottom right.*/
+/*Because this is just a background image, from my understanding, deploying it in the CSS vs HTML is acceptable. We set some basic size elements, as well as give it some space between it and the next section.  Because the
+image it's using is much larger, we told it be contained in those size parameters we already set up.  */
+
+#hero {
+    height: 125px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/woods.jpg");/*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
+    background-size: contain;
+    /*These 3 lines let us decide how and where we want the text to be displayed*/
+    position: relative;    
+    text-align: center;
+    color: white;
+   }
+
+/*The subtitle also needs some direct attention we gave it parameters in the previous style as to where we want it.  Now in this one we place it in there as well as shift it around a little*/
+
+#subtitle {
+    position: absolute;
+    bottom: 1px;
+    right: 16px;
+    
+}
+
+
 /*Main*/
+
+/*First up is to set some basic properties for the remaining sections. We want the header and footer to have different dimensions, so we leave them out of this.*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
 /*About Me*/
 /*My Work*/
 /*Contact Me*/
