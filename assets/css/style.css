@@ -24,11 +24,11 @@ body {
     text-shadow: #FC0 1px 0 10px;
     color: black;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    
-    
+
+
 }
 
 /*Header*/
@@ -58,16 +58,17 @@ header nav a {
     text-decoration: solid;
     font-size: x-large;
     margin-right: 20px;
-    
+
 }
 
 /*This is where we have our first links, so time to start styling those as well. Did this by using psuedo-class : to denote that after (said action) then this change is to be implemented. To start we have links turning yellow, from the original black. 
 We also have the cursor changing to a grab hand in addition to the link glowing white as you hover it.  As you click it the link itself will become gray.*/
 
-a:link{
+a:link {
     color: black;
 
 }
+
 a:visited {
     color: yellow;
 }
@@ -91,13 +92,14 @@ image it's using is much larger, we told it be contained in those size parameter
     height: 125px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/woods.jpg");/*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
+    background-image: url("../images/woods.jpg");
+    /*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
     background-size: contain;
     /*These 3 lines let us decide how and where we want the text to be displayed*/
-    position: relative;    
+    position: relative;
     text-align: center;
     color: white;
-   }
+}
 
 /*The subtitle also needs some direct attention we gave it parameters in the previous style as to where we want it.  Now in this one we place it in there as well as shift it around a little*/
 
@@ -105,14 +107,14 @@ image it's using is much larger, we told it be contained in those size parameter
     position: absolute;
     bottom: 1px;
     right: 16px;
-    
+
 }
 
 
 /*Main*/
 
 /*First up is to set some basic properties for the remaining sections. We want the header and footer to have different dimensions, so we leave them out of this.*/
-main{
+main {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -121,14 +123,43 @@ main{
 /*About Me*/
 /*First thing we did as put an aside tag on the head elements for the next three sections. We want this title to be to the side of the actual content */
 
-aside {
+/*aside {
     flex: 1;
     padding: 80px;
     text-align: left;
+    border-right: 3px solid var(--bookend);
 
 }
+*/
+.topics {
+    display: flex;
+  /* Align the child elements to the center of the parent */
+  align-items: center;
+  
+}
+.topics h2{
+ 
+    border-right: 3px solid var(--bookend);
+    
+}
+.about-me {
+margin-left: 3%;
+  flex: 0 0 60%;
+}
+
+#profile-pic {
+    float: left;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 30px;
+
+}
+
 /*My Work*/
 /*Contact Me*/
+
 
 
 
@@ -141,8 +172,15 @@ footer {
     text-align: center;
     background-color: var(--bookend);
     margin-top: auto;
-    
+
 }
 
 
 /*Compatibility*/
+
+@media screen and (max-width: 768px) {
+    main,
+    nav,
+    .topics {
+      flex-direction: column;
+    }
