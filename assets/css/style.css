@@ -7,8 +7,49 @@
 
 }
 
+/*Styles to be added to the entire page */
+
+* {
+    box-sizing: border-box;
+}
+
 /*Body*/
+/*First, we want to establish some basics.  I want the font to be simliar across all the text on the screen, so I first gave it a variable, and then applyy it in the body so that I don't have to redo it each time.  Added a shadow to that text.
+Put the min height to 100vh, where vh is the viewport height, aka I want it to take up the whole page. */
+body {
+    background-color: #5d8AA8;
+    font-family: var(--font-theme);
+    text-shadow: #FC0 1px 0 10px;
+    /*display: flex;
+    flex-direction: column;*/
+    edited out as they are conflicting min-height: 100vh;
+    justify-content: flex-start;
+}
+
 /*Header*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bookend);
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* First, we wanted to move the heading from the left some, so we put a margin there. */
+h1 {
+    margin-left: 20px;
+
+}
+
+/*So first we need the navigation links to be displayed inline as opposed to stacked on eachother. Next we made some size and appearance changes.  Lastly we made it so they would come left from the right margin a bit.*/
+header nav a {
+    display: inline;
+    text-decoration: solid;
+    font-size: x-large;
+    margin-right: 20px;
+
+}
+
 /*Banner*/
 /*Main*/
 /*About Me*/
