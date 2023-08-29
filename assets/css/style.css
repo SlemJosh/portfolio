@@ -119,6 +119,14 @@ main{
 }
 
 /*About Me*/
+/*First thing we did as put an aside tag on the head elements for the next three sections. We want this title to be to the side of the actual content */
+
+aside {
+    flex: 1;
+    padding: 80px;
+    text-align: left;
+
+}
 /*My Work*/
 /*Contact Me*/
 
