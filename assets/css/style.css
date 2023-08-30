@@ -165,8 +165,6 @@ main {
 }
 
 
-
-
 /*Changed the font and style for the paragraph text.  Wanted it to be a little more readable than the style choice I have for the rest of the page.*/
 p {
     float: left;
@@ -212,12 +210,9 @@ so that we can keep stuff central on the page especially on bigger screens neede
 /*Here's wher we get to change what we just wrote for all the boxes, but just to the first one.  Since he's the first, he's consider the first-child to the parent (the box) and we want him to be a little bigger.*/
 
 .flex-item:first-child {
-    margin-left: 25px;
     min-height: 250px;
     flex-basis: 100%;
-  
        
-
 }
 
 /* Just like the links in the navigation, we might as well have some sort of affects as we mouse over these boxes.  For starters we want the background to do do the soft-lighting affect we mentioned earlier and then
@@ -355,9 +350,10 @@ footer h3{
         
     }
     
-    .flex-item,
+.flex-item,
     .flex-item:first-child {
-      flex-basis: 100%;
+    
+      flex-basis: 100%;                 
     }
   
     .flex-item:first-child {
