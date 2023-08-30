@@ -4,6 +4,7 @@
 
 :root {
     --bookend: #9B2335;
+    --shadow: #FC0 1px 0 10px;
     --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
 
 }
@@ -12,7 +13,7 @@
 
 * {
     box-sizing: border-box;
-    max-width: 1400px;      /*Once I got to 1400 width my contacts list would shift to the right of the works thing.  At about 8000px the works also started shifting over.  This way I can limit it to always have them in the column I want */
+       /*Once I got to 1400 width my contacts list would shift to the right of the works thing.  At about 8000px the works also started shifting over.  This way I can limit it to always have them in the column I want */
     
 }
 
@@ -23,13 +24,15 @@ Put the min height to 100vh, where vh is the viewport height, aka I want it to t
 body {
     background-color: #5d8AA8;
     font-family: var(--font-theme);
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: var(--shadow);
     color: black;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-
+    width: 90%;
+    margin: 0 auto;
+    
 
 }
 
@@ -127,7 +130,7 @@ main {
 
 .topics {
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     
 
 }
@@ -166,9 +169,10 @@ main {
 
 /*Changed the font and style for the paragraph text.  Wanted it to be a little more readable than the style choice I have for the rest of the page.*/
 p {
+    float: left;
     text-shadow: none;
     font-family: Arial, Helvetica, sans-serif;
-    ;
+    
 
 }
 
@@ -195,9 +199,10 @@ so that we can keep stuff central on the page especially on bigger screens neede
 .flex-item {
     min-height: 150px;
     max-height: 150px;
+    max-width: 75px;
     margin: 5px;
     display: flex;
-    /*flex-basis: calc(50% - 2em);*/
+    flex-basis: calc(50% - 2em);
     background-blend-mode: soft-light;
     transition: all 0.5s;
     max-width: 85%;
@@ -206,9 +211,9 @@ so that we can keep stuff central on the page especially on bigger screens neede
 /*Here's wher we get to change what we just wrote for all the boxes, but just to the first one.  Since he's the first, he's consider the first-child to the parent (the box) and we want him to be a little bigger.*/
 
 .flex-item:first-child {
-    min-height: 350px;
+    min-height: 250px;
     flex-basis: 100%;
-    /*max-width: 90%;*/
+    max-width: 90%;
 
 }
 
