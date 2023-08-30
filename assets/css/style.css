@@ -12,6 +12,7 @@
 
 * {
     box-sizing: border-box;
+   
 }
 
 /*Body*/
@@ -131,7 +132,8 @@ main {
 
 /*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
 .topics h2 {
-    margin-left: 200px;
+ 
+    margin-left: 100px;
 
     border-right: 3px solid var(--bookend);
 
@@ -310,16 +312,25 @@ footer {
 
 
 /*Compatibility*/
-/*
-@media screen and (max-width: 768px) {
-
-    main,
-    nav,
-    .topics {
-        flex-direction: column;
-        
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
     }
-}*/
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+    
+   
+}
+
+
+
+
 @media screen and (max-width: 768px) {
     main,
     nav,
@@ -336,15 +347,5 @@ footer {
       min-height: 150px;
     }
   
-    /*.hero-banner {
-      justify-content: center;
-      text-align: center;
-    }
-  
-    /*.address {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    */
   }
   
