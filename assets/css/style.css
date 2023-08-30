@@ -106,6 +106,20 @@ image it's using is much larger, we told it be contained in those size parameter
     color: white;
 }
 
+/*To demonstrate we know how to put a picture on our profile, we added this avatar of a bear in a computer class. It may or may not be me.*/
+
+#profile-pic {
+    position: absolute;
+    /*float: left;
+    /*margin-left: 20px;*/
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    bottom: 1px;
+    left: 8px;
+
+}
+
 /*The subtitle also needs some direct attention we gave it parameters in the previous style as to where we want it.  Now in this one we place it in there as well as shift it around a little*/
 
 #subtitle {
@@ -138,10 +152,8 @@ main {
 /*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
 .topics h2 {
  
-    margin-left: 100px;
-
+    margin-left: 150px;
     border-right: 3px solid var(--bookend);
-
 
 }
 
@@ -154,18 +166,8 @@ main {
     flex: 0 0 70%;
 }
 
-/*To demonstrate we know how to put a picture on our profile, we added this avatar of a bear in a computer class. It may or may not be me.*/
-/* We want the text to gravitate towards the picture so we had the picture float, and then we set some basic dimensions. We also wanted to round those edges to make it look smoother*/
 
-#profile-pic {
-    float: left;
-    margin-left: 20px;
-    width: 180px;
-    height: 180px;
-    margin-right: 20px;
-    border-radius: 30px;
 
-}
 
 /*Changed the font and style for the paragraph text.  Wanted it to be a little more readable than the style choice I have for the rest of the page.*/
 p {
@@ -173,7 +175,6 @@ p {
     text-shadow: none;
     font-family: Arial, Helvetica, sans-serif;
     
-
 }
 
 
@@ -199,21 +200,23 @@ so that we can keep stuff central on the page especially on bigger screens neede
 .flex-item {
     min-height: 150px;
     max-height: 150px;
-    max-width: 75px;
     margin: 5px;
     display: flex;
     flex-basis: calc(50% - 2em);
     background-blend-mode: soft-light;
     transition: all 0.5s;
-    max-width: 85%;
+    border-color: var(--bookend);
+    border-style: solid;
+   
 }
 
 /*Here's wher we get to change what we just wrote for all the boxes, but just to the first one.  Since he's the first, he's consider the first-child to the parent (the box) and we want him to be a little bigger.*/
 
 .flex-item:first-child {
+    margin-left: 25px;
     min-height: 250px;
     flex-basis: 100%;
-    max-width: 90%;
+    
 
 }
 
@@ -293,11 +296,10 @@ between the links.  Also, for them to line up more with the other content on the
     display: flex;
     flex-wrap: wrap;
     font-family: var(--font-theme);
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: var(--shadow);
     text-decoration-style: solid;
     font-size: x-large;
-    margin: 50px;
-    margin-left: 200px;
+    margin: 50px 150px 50px 150px;
     gap: 50px;
     
 
@@ -318,8 +320,13 @@ between the links.  Also, for them to line up more with the other content on the
 footer {
     text-align: center;
     background-color: var(--bookend);
+    text-shadow: var(--shadow);
     margin-top: auto;
 
+}
+
+footer h3{
+    text-shadow: var(--shadow);
 }
 
 
