@@ -97,8 +97,7 @@ image it's using is much larger, we told it be contained in those size parameter
     height: 125px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/woods.jpg");
-    /*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
+    background-image: url("../images/woods.jpg"); /*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
     background-size: contain;
     /*These 3 lines let us decide how and where we want the text to be displayed*/
     position: relative;
@@ -263,21 +262,21 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 }
 
 .work3 {
-    background-image: url("../images/construction.jpg");
+    background-image: url("../images/construction.jpg");/*<a href="https://www.vecteezy.com/free-vector/under-construction">Under Construction Vectors by Vecteezy</a>*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .work4 {
-    background-image: url("../images/coming.jpg");
+    background-image: url("../images/coming.jpg");/*<a href="https://www.vecteezy.com/free-vector/coming-soon">Coming Soon Vectors by Vecteezy</a>*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .work5 {
-    background-image: url("../images/broken.jpg");
+    background-image: url("../images/broken.jpg"); /*<a href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a>*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -289,7 +288,7 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 
 /* Now we simply just add some sizing and spacing for the address links we setup in the html.  I put a gap because I think it looks better when there is a significant amount of space
 between the links.  Also, for them to line up more with the other content on the page, we gave the starting link a huge margin to move away from the topic header.*/
-.address {
+#address {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -302,6 +301,12 @@ between the links.  Also, for them to line up more with the other content on the
     flex: 0 0 80%;
 
 }
+
+#address a{
+    color: black;
+    text-shadow: var(--shadow);
+}
+
 
 
 /*Footer*/

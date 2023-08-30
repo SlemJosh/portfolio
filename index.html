@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Slem Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css"> <!--Make Sure To Properly Source-->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css"> <!--https://necolas.github.io/normalize.css/-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <a id="top"></a>
@@ -19,7 +19,7 @@
         <a href="https://generatorfun.com/random-bear-image" target="_blank"><img src="assets/images/bearpawred.png"
                 height="100px" alt="Bear Paw">
         </a>
-        <!--By adding a target into the link, it will open the page on a new tab so they don't get taken away from this page-->
+        <!--By adding (target="_blank") into the link, it will open the page on a new tab so they don't get taken away from this page-->
 
         <nav>
 
@@ -36,12 +36,14 @@
             <div id="profile-pic">
                 <img src="assets/images/codingbear.jpg" id="profile-pic" alt="A bear in class">
             </div>
+            <!--Wanted to put my profile pic in the bottom left of the banner-->
             <div id="subtitle">
                 <h2>Productive and Passionate</h2>
             </div>
             <!--Wanted to put a subtitle in the bottom right of the banner-->
         </div>
     </section>
+    <br><br>
     <!--Main Content Begins-->
     <main>
         <!--First Section is About Me-->
@@ -50,10 +52,8 @@
 
             <h2 id="about">About Me</h2>
 
-            <div class="about-me">
-
-                <!--<img src="assets/images/codingbear.jpg" id="profile-pic" alt="A bear in class">-->
-
+            <section class="about-me">
+                
                 <p>
                     What started as a passion for gaming has encompassed my whole outlook on Tech and Computers. I'm
                     currently enrolled in a Full Stack Coding bootcamp adding to my various skills that I've picked up
@@ -73,9 +73,10 @@
                     <br><br><strong>
                         <center>Below I've included some of my more recent works, and hope to populate this
                             page with even more as I complete them.
-                </p></strong></center>
+                    </strong></center>|
+                </p>
 
-            </div>
+            </section>
 
         </section>
         <!--Second Section is My Work-->
@@ -131,7 +132,7 @@
 
             <h2 id="contact">Contact Me</h2>
 
-            <nav class="address">
+            <nav id="address">
                 <a href="tel:+NotARealPhoneNumber">Call Me @ 867-5309</a>
                 <a href="mailto:grant.slem@gmail.com">Email Me</a>
                 <a href="https://github.com/SlemJosh" target="_blank">GitHub</a>
