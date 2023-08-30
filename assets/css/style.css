@@ -215,8 +215,8 @@ so that we can keep stuff central on the page especially on bigger screens neede
     margin-left: 25px;
     min-height: 250px;
     flex-basis: 100%;
-    
-    
+  
+       
 
 }
 
@@ -347,9 +347,6 @@ footer h3{
    
 }
 
-
-
-
 @media screen and (max-width: 768px) {
     main,
     nav,
@@ -357,6 +354,7 @@ footer h3{
         flex-direction: column;
         
     }
+    
     .flex-item,
     .flex-item:first-child {
       flex-basis: 100%;
@@ -364,6 +362,11 @@ footer h3{
   
     .flex-item:first-child {
       min-height: 150px;
+    }
+
+    .topics h2{
+        border-right: none;
+        border-bottom: 3px solid var(--bookend);
     }
   
   }
