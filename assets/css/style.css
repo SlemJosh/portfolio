@@ -110,8 +110,6 @@ image it's using is much larger, we told it be contained in those size parameter
 
 #profile-pic {
     position: absolute;
-    /*float: left;
-    /*margin-left: 20px;*/
     width: 100px;
     height: 100px;
     border-radius: 30px;
@@ -137,6 +135,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+    justify-content: center;
+   
 }
 
 /*About Me*/
@@ -144,15 +144,13 @@ main {
 
 .topics {
     display: flex;
-    /*align-items: center;*/
-    
+    justify-content: center;    
 
 }
 
 /*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
 .topics h2 {
  
-    margin-left: 150px;
     border-right: 3px solid var(--bookend);
 
 }
@@ -187,7 +185,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 20px;
-    
+   
 
 }
 
@@ -207,6 +205,7 @@ so that we can keep stuff central on the page especially on bigger screens neede
     transition: all 0.5s;
     border-color: var(--bookend);
     border-style: solid;
+    
    
 }
 
@@ -216,6 +215,7 @@ so that we can keep stuff central on the page especially on bigger screens neede
     margin-left: 25px;
     min-height: 250px;
     flex-basis: 100%;
+    
     
 
 }
@@ -289,10 +289,10 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 /*Contact Me*/
 
 
-
 /* Now we simply just add some sizing and spacing for the address links we setup in the html.  I put a gap because I think it looks better when there is a significant amount of space
 between the links.  Also, for them to line up more with the other content on the page, we gave the starting link a huge margin to move away from the topic header.*/
 #address {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     font-family: var(--font-theme);
