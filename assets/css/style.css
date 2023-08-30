@@ -121,31 +121,30 @@ main {
 }
 
 /*About Me*/
-/*First thing we did as put an aside tag on the head elements for the next three sections. We want this title to be to the side of the actual content */
+/* We gave all three sections the topics class, so that we can assign the layout as well as some general sizing and positioning guidelines.*/
 
-/*aside {
-    flex: 1;
-    padding: 80px;
-    text-align: left;
-    border-right: 3px solid var(--bookend);
-
-}
-*/
 .topics {
     display: flex;
-  /* Align the child elements to the center of the parent */
-  align-items: center;
-  
+    align-items: center;
+
 }
-.topics h2{
- 
+
+/*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
+.topics h2 {
+
     border-right: 3px solid var(--bookend);
-    
+
 }
+
+/* Again more individual sizing options, as we want stuff moved a bit away from the edge.*/
+
 .about-me {
-margin-left: 3%;
-  flex: 0 0 60%;
+    margin-left: 3%;
+    flex: 0 0 60%;
 }
+
+/*To demonstrate we know how to put a picture on our profile, we added this avatar of a bear in a computer class. It may or may not be me.*/
+/* We want the text to gravitate towards the picture so we had the picture float, and then we set some basic dimensions. We also wanted to round those edges to make it look smoother*/
 
 #profile-pic {
     float: left;
@@ -158,6 +157,9 @@ margin-left: 3%;
 }
 
 /*My Work*/
+
+
+
 /*Contact Me*/
 
 
@@ -179,8 +181,9 @@ footer {
 /*Compatibility*/
 
 @media screen and (max-width: 768px) {
+
     main,
     nav,
     .topics {
-      flex-direction: column;
+        flex-direction: column;
     }
