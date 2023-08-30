@@ -126,19 +126,22 @@ main {
 .topics {
     display: flex;
     align-items: center;
-
+    
 }
 
 /*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
 .topics h2 {
-
+    margin-left: 200px;
+ 
     border-right: 3px solid var(--bookend);
+  
 
 }
 
 /* Again more individual sizing options, as we want stuff moved a bit away from the edge.*/
 
 .about-me {
+   
     margin-left: 3%;
     flex: 0 0 60%;
 }
@@ -149,15 +152,114 @@ main {
 #profile-pic {
     float: left;
     margin-left: 20px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin-right: 20px;
     border-radius: 30px;
 
 }
+/*Changed the font and style for the paragraph text.  Wanted it to be a little more readable than the style choice I have for the rest of the page.*/
+p {
+    text-shadow: none;
+    font-family: Arial, Helvetica, sans-serif;;
+
+}
+
 
 /*My Work*/
 
+/* First we setup a container to keep all the work boxes together.*/
+
+.works-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 20px;
+
+}
+
+/*We need to establish the spacing for all our items now. First we have to identify all our items. Then we need to give them all the same sort of styling options.  We will 
+shortly change that as we want the first on (the first one) to be a little different.  We start the changes here with the minimum sizes we want.  Even as the screen
+wil change size, we want a solid square for each item to still be present.  Added some space inbetween with the margin.  And then I was looking at W3 schools and found out about
+flex-basis and using calculations to determine the size of stuff in a box.  Also had a chance to work on what these images look like now vs when you will hover over them.  Also, 
+so that we can keep stuff central on the page especially on bigger screens needed to set a max-width so we can stretch a bit.*/
+.flex-item {
+    min-height: 150px;
+    max-height: 150px;
+    margin: 5px;
+    display: flex;
+    flex-basis: calc(50% - 2em);
+    background-blend-mode: soft-light;
+    transition: all 0.5s;
+    max-width: 85%;
+}
+/*Here's wher we get to change what we just wrote for all the boxes, but just to the first one.  Since he's the first, he's consider the first-child to the parent (the box) and we want him to be a little bigger.*/
+
+.flex-item:first-child {
+    min-height: 350px;
+    flex-basis: 100%;
+    /*max-width: 90%;*/
+    
+}
+
+/* Just like the links in the navigation, we might as well have some sort of affects as we mouse over these boxes.  For starters we want the background to do do the soft-lighting affect we mentioned earlier and then
+have the box with the link have a transparency to it.*/
+
+.flex-item:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Here we can control the actual link and span associated with it.  We can change the cursor and also align those links to where we want.  In this case, want it down 25px and over 10px from the sides.*/
+
+.flex-item div {
+    padding: 25px 10px;
+    cursor: pointer;
+}
+/* Messed around with the fonts for both the header and the descriptive text underneath*/
+h3{
+    font-size: larger;
+    text-indent: 5px;
+    text-shadow: none;
+}
+span{
+    font-size: larger;
+    color: white;
+    
+}
+
+/*Now here's where we get to link all our boxes to images in the directory.  Some of the images were again quite large so we needed to set some boundaries.  In this case we decided to just have the center 
+of the image as the focal point, and to just fill in that box.  I noticed that our horiseon link would sometimes start repeating, so we added the no-repeat tag to all of em just in case.*/
+
+.work1 {
+    background-image: url("../images/horiseonpage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work2 {
+    background-image: url("../images/preworkstudyguide.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work3 {
+    background-image: url("../images/construction.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work4 {
+    background-image: url("../images/coming.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work5 {
+    background-image: url("../images/broken.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /*Contact Me*/
@@ -180,10 +282,31 @@ footer {
 
 /*Compatibility*/
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
 
     main,
     nav,
     .topics {
         flex-direction: column;
     }
+    */
+    @media screen and (max-width: 760px) {
+        .flex-item,
+        .flex-item:first-child {
+          flex-basis: 100%;
+        }
+      
+        .flex-item:first-child {
+          min-height: 150px;
+        }
+      
+        .hero-banner {
+          justify-content: center;
+          text-align: center;
+        }
+      
+        .contact address {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
