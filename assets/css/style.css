@@ -22,7 +22,7 @@
 Put the min height to 100vh, where vh is the viewport height, aka I want it to take up the whole page. */
 
 body {
-    background-color: #5d8AA8;
+    background-color: #6b6b6b; /* #5d8AA8;*/
     font-family: var(--font-theme);
     text-shadow: var(--shadow);
     color: black;
@@ -289,7 +289,7 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 
 /* Now we simply just add some sizing and spacing for the address links we setup in the html.  I put a gap because I think it looks better when there is a significant amount of space
 between the links.  Also, for them to line up more with the other content on the page, we gave the starting link a huge margin to move away from the topic header.*/
-#address {
+.address {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -302,12 +302,6 @@ between the links.  Also, for them to line up more with the other content on the
     flex: 0 0 80%;
 
 }
-
-/*Because some of the links weren't keep the font, we just decided to give them the simliar color.*/
-#address a {
-    color: black;
-}
-
 
 
 /*Footer*/
@@ -331,6 +325,22 @@ footer h3{
 /*Compatibility*/
 
 /*Have two different media thresholds*/
+
+@media screen and (min-width: 2535px) {
+    main,
+    nav,
+    .topics {
+        flex-direction: column;
+        
+    }
+    .topics h2{
+        border-right: none;
+        border-bottom: 3px solid var(--bookend);
+    }
+  
+}
+
+
 @media screen and (max-width: 992px) {
     header {
         padding: 0 0 10px 0;
