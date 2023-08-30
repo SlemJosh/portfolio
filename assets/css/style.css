@@ -126,22 +126,22 @@ main {
 .topics {
     display: flex;
     align-items: center;
-    
+
 }
 
 /*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
 .topics h2 {
     margin-left: 200px;
- 
+
     border-right: 3px solid var(--bookend);
-  
+
 
 }
 
 /* Again more individual sizing options, as we want stuff moved a bit away from the edge.*/
 
 .about-me {
-   
+
     margin-left: 3%;
     flex: 0 0 60%;
 }
@@ -158,10 +158,12 @@ main {
     border-radius: 30px;
 
 }
+
 /*Changed the font and style for the paragraph text.  Wanted it to be a little more readable than the style choice I have for the rest of the page.*/
 p {
     text-shadow: none;
-    font-family: Arial, Helvetica, sans-serif;;
+    font-family: Arial, Helvetica, sans-serif;
+    ;
 
 }
 
@@ -170,7 +172,7 @@ p {
 
 /* First we setup a container to keep all the work boxes together.*/
 
-.works-container{
+.works-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -183,6 +185,7 @@ shortly change that as we want the first on (the first one) to be a little diffe
 wil change size, we want a solid square for each item to still be present.  Added some space inbetween with the margin.  And then I was looking at W3 schools and found out about
 flex-basis and using calculations to determine the size of stuff in a box.  Also had a chance to work on what these images look like now vs when you will hover over them.  Also, 
 so that we can keep stuff central on the page especially on bigger screens needed to set a max-width so we can stretch a bit.*/
+
 .flex-item {
     min-height: 150px;
     max-height: 150px;
@@ -193,13 +196,14 @@ so that we can keep stuff central on the page especially on bigger screens neede
     transition: all 0.5s;
     max-width: 85%;
 }
+
 /*Here's wher we get to change what we just wrote for all the boxes, but just to the first one.  Since he's the first, he's consider the first-child to the parent (the box) and we want him to be a little bigger.*/
 
 .flex-item:first-child {
     min-height: 350px;
     flex-basis: 100%;
     /*max-width: 90%;*/
-    
+
 }
 
 /* Just like the links in the navigation, we might as well have some sort of affects as we mouse over these boxes.  For starters we want the background to do do the soft-lighting affect we mentioned earlier and then
@@ -215,16 +219,18 @@ have the box with the link have a transparency to it.*/
     padding: 25px 10px;
     cursor: pointer;
 }
+
 /* Messed around with the fonts for both the header and the descriptive text underneath*/
-h3{
+h3 {
     font-size: larger;
     text-indent: 5px;
     text-shadow: none;
 }
-span{
+
+span {
     font-size: larger;
     color: white;
-    
+
 }
 
 /*Now here's where we get to link all our boxes to images in the directory.  Some of the images were again quite large so we needed to set some boundaries.  In this case we decided to just have the center 
@@ -236,24 +242,28 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .work2 {
     background-image: url("../images/preworkstudyguide.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .work3 {
     background-image: url("../images/construction.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .work4 {
     background-image: url("../images/coming.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .work5 {
     background-image: url("../images/broken.jpg");
     background-position: center;
@@ -264,6 +274,25 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 
 /*Contact Me*/
 
+/* Now we simply just add some sizing and spacing for the address links we setup in the html.  I put a gap because I think it looks better when there is a significant amount of space
+between the links.  Also, for them to line up more with the other content on the page, we gave the starting link a huge margin to move away from the topic header.*/
+#address {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-theme);
+    text-shadow: #FC0 1px 0 10px;
+    text-decoration-style: solid;
+    font-size: x-large;
+    margin: 50px;
+    margin-left: 200px;
+    gap: 50px;
+
+}
+
+/*Because some of the links weren't keep the font, we just decided to give them the simliar color.*/
+#address a {
+    color: black;
+}
 
 
 
@@ -281,32 +310,41 @@ footer {
 
 
 /*Compatibility*/
-
-/*@media screen and (max-width: 768px) {
+/*
+@media screen and (max-width: 768px) {
 
     main,
     nav,
     .topics {
         flex-direction: column;
+        
+    }
+}*/
+@media screen and (max-width: 768px) {
+    main,
+    nav,
+    .topics {
+        flex-direction: column;
+        
+    }
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    /*.hero-banner {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    /*.address {
+      flex-direction: column;
+      align-items: flex-start;
     }
     */
-    @media screen and (max-width: 760px) {
-        .flex-item,
-        .flex-item:first-child {
-          flex-basis: 100%;
-        }
-      
-        .flex-item:first-child {
-          min-height: 150px;
-        }
-      
-        .hero-banner {
-          justify-content: center;
-          text-align: center;
-        }
-      
-        .contact address {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
+  }
+  
