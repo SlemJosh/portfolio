@@ -241,8 +241,7 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 }
 
 .work3 {
-    background-image: url("../images/construction.jpg");
-    /*<a href="https://www.vecteezy.com/free-vector/under-construction">Under Construction Vectors by Vecteezy</a>*/
+    background-image: url("../images/cuilnarycrossroads.png");  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,8 +269,8 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 between the links.  Also, for them to line up more with the other content on the page, we gave the starting link a huge margin to move away from the topic header.*/
 
 #address {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     font-family: var(--font-theme);
     text-shadow: var(--shadow);
@@ -285,6 +284,7 @@ between the links.  Also, for them to line up more with the other content on the
 #address a {
     color: yellow;
     text-shadow: var(--shadow);
+    margin: 0 20px;
 }
 
 #address a:hover{
