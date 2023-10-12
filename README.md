@@ -32,7 +32,7 @@ made me feel terrific about the whole thing.  This project has really helped me 
 Deployed at https://slemjosh.github.io/portfolio/
 
 ## Usage
-![portfolio webpage.](.assets/images/webpagescreenshot.png)
+![portfolio webpage.](assets/images/webpagescreenshot.png)
 
 ## Credits
 
