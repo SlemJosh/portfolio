@@ -3,16 +3,15 @@
 /*First thing is a place to state our variables*/
 
 :root {
-    --bookend: #9B2335;
-    --shadow: #FC0 1px 0 10px;
-    --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
-
+  --bookend: #9b2335;
+  --shadow: #fc0 1px 0 10px;
+  --font-theme: "Papyrus", "Copperplate", "Times New Roman", "serif";
 }
 
 /*Styles to be added to the entire page */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*Body*/
@@ -20,16 +19,16 @@
 Put the min height to 100vh, where vh is the viewport height, aka I want it to take up the whole page. */
 
 body {
-    background-color: #6b6b6b;
-    font-family: var(--font-theme);
-    text-shadow: var(--shadow);
-    color: black;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    width: 90%;
-    margin: 0 auto;
+  background-color: #6b6b6b;
+  font-family: var(--font-theme);
+  text-shadow: var(--shadow);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /*Header*/
@@ -38,46 +37,46 @@ body {
 I also needed to tell this property to flex as well.*/
 
 header {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--bookend);
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--bookend);
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* First, we wanted to move the heading from the left some, so we put a margin there. */
 
 h1 {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 /*So first we need the navigation links to be displayed inline as opposed to stacked on eachother. Next we made some size and appearance changes.  Lastly we made it so they would come left from the right margin a bit.*/
 
 header nav a {
-    display: inline;
-    text-decoration: solid;
-    font-size: x-large;
-    margin-right: 20px;
+  display: inline;
+  text-decoration: solid;
+  font-size: x-large;
+  margin-right: 20px;
 }
 
 /*This is where we have our first links, so time to start styling those as well. Did this by using psuedo-class : to denote that after (said action) then this change is to be implemented. To start we have links turning yellow, from the original black. 
 We also have the cursor changing to a grab hand in addition to the link glowing white as you hover it.  As you click it the link itself will become gray.*/
 
 a:link {
-    color: black;
+  color: black;
 }
 
 a:visited {
-    color: yellow;
+  color: yellow;
 }
 
 a:hover {
-    color: white;
-    cursor: grab;
+  color: white;
+  cursor: grab;
 }
 
 a:active {
-    color: gray;
+  color: gray;
 }
 
 /*Banner*/
@@ -87,89 +86,86 @@ a:active {
 image it's using is much larger, we told it be contained in those size parameters we already set up.  */
 
 #hero {
-    height: 125px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/woods.jpg");
-    /*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
-    background-size: contain;
-    /*These 3 lines let us decide how and where we want the text to be displayed*/
-    position: relative;
-    text-align: center;
-    color: white;
+  height: 125px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/woods.jpg");
+  /*<a href="https://www.vecteezy.com/free-vector/woods">Woods Vectors by Vecteezy</a>*/
+  background-size: contain;
+  /*These 3 lines let us decide how and where we want the text to be displayed*/
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 /*To demonstrate we know how to put a picture on our profile, we added this avatar of a bear in a computer class. It may or may not be me.*/
 
 #profile-pic {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 30px;
-    bottom: 1px;
-    left: 8px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  bottom: 1px;
+  left: 8px;
 }
 
 /*The subtitle also needs some direct attention we gave it parameters in the previous style as to where we want it.  Now in this one we place it in there as well as shift it around a little*/
 
 #subtitle {
-    position: absolute;
-    bottom: 1px;
-    right: 16px;
+  position: absolute;
+  bottom: 1px;
+  right: 16px;
 }
-
 
 /*Main*/
 
 /*First up is to set some basic properties for the remaining sections. We want the header and footer to have different dimensions, so we leave them out of this.*/
 main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /*About Me*/
 /* We gave all three sections the topics class, so that we can assign the layout as well as some general sizing and positioning guidelines.*/
 
 .topics {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*Wanted a cool line just to the right of the header to also give people a sense of the flow of the page.  Header and just to the right of that line is the topic under that header.*/
 .topics h2 {
-    border-right: 3px solid var(--bookend);
+  border-right: 3px solid var(--bookend);
 }
 
 /* Again more individual sizing options, as we want stuff moved a bit away from the edge.*/
 
 .about-me {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 3%;
-    flex: 0 0 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 3%;
+  flex: 0 0 80%;
 }
-
 
 /*Changed the font and style for the paragraph text.  Wanted it to be a little more readable than the style choice I have for the rest of the page.*/
 p {
-    float: left;
-    text-shadow: none;
-    font-family: Arial, Helvetica, sans-serif;
+  float: left;
+  text-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /*My Work*/
 
 /* First we setup a container to keep all the work boxes together.*/
 
 .works-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 20px;
-    flex: 0 0 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 20px;
+  flex: 0 0 80%;
 }
 
 /*We need to establish the spacing for all our items now. First we have to identify all our items. Then we need to give them all the same sort of styling options.  We will 
@@ -179,88 +175,87 @@ flex-basis and using calculations to determine the size of stuff in a box.  Also
 so that we can keep stuff central on the page especially on bigger screens needed to set a max-width so we can stretch a bit.*/
 
 .flex-item {
-    min-height: 150px;
-    max-height: 150px;
-    margin: 5px;
-    display: flex;
-    flex-basis: calc(50% - 2em);
-    background-blend-mode: soft-light;
-    transition: all 0.5s;
-    border-color: var(--bookend);
-    border-style: solid;
+  min-height: 150px;
+  max-height: 150px;
+  margin: 5px;
+  display: flex;
+  flex-basis: calc(50% - 2em);
+  background-blend-mode: soft-light;
+  transition: all 0.5s;
+  border-color: var(--bookend);
+  border-style: solid;
 }
 
 /*Here's wher we get to change what we just wrote for all the boxes, but just to the first one.  Since he's the first, he's consider the first-child to the parent (the box) and we want him to be a little bigger.*/
 
 .flex-item:first-child {
-    min-height: 250px;
-    flex-basis: 100%;
+  min-height: 250px;
+  flex-basis: 100%;
 }
 
 /* Just like the links in the navigation, we might as well have some sort of affects as we mouse over these boxes.  For starters we want the background to do do the soft-lighting affect we mentioned earlier and then
 have the box with the link have a transparency to it.*/
 
 .flex-item:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /*Here we can control the actual link and span associated with it.  We can change the cursor and also align those links to where we want.  In this case, want it down 25px and over 10px from the sides.*/
 
 .flex-item div {
-    padding: 25px 10px;
-    cursor: pointer;
+  padding: 25px 10px;
+  cursor: pointer;
 }
 
 /* Messed around with the fonts for both the header and the descriptive text underneath*/
 h3 {
-    font-size: larger;
-    text-indent: 5px;
-    text-shadow: none;
+  font-size: larger;
+  text-indent: 5px;
+  text-shadow: none;
 }
 
 span {
-    font-size: larger;
-    color: white;
+  font-size: larger;
+  color: white;
 }
 
 /*Now here's where we get to link all our boxes to images in the directory.  Some of the images were again quite large so we needed to set some boundaries.  In this case we decided to just have the center 
 of the image as the focal point, and to just fill in that box.  I noticed that our horiseon link would sometimes start repeating, so we added the no-repeat tag to all of em just in case.*/
 
 .work1 {
-    background-image: url("../images/horiseonpage.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../images/horiseonpage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .work2 {
-    background-image: url("../images/preworkstudyguide.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../images/preworkstudyguide.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .work3 {
-    background-image: url("../images/cuilnarycrossroads.png");  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../images/cuilnarycrossroads.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .work4 {
-    background-image: url("../images/coming.jpg");
-    /*<a href="https://www.vecteezy.com/free-vector/coming-soon">Coming Soon Vectors by Vecteezy</a>*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../images/christmaskarma.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .work5 {
-    background-image: url("../images/broken.jpg");
-    /*<a href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a>*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../images/broken.jpg");
+  /*<a href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a>*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*Contact Me*/
@@ -269,26 +264,26 @@ of the image as the focal point, and to just fill in that box.  I noticed that o
 between the links.  Also, for them to line up more with the other content on the page, we gave the starting link a huge margin to move away from the topic header.*/
 
 #address {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: var(--font-theme);
-    text-shadow: var(--shadow);
-    text-decoration-style: solid;
-    font-size: x-large;
-    margin: 50px;
-    gap: 50px;
-    flex: 0 0 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: var(--font-theme);
+  text-shadow: var(--shadow);
+  text-decoration-style: solid;
+  font-size: x-large;
+  margin: 50px;
+  gap: 50px;
+  flex: 0 0 80%;
 }
 
 #address a {
-    color: yellow;
-    text-shadow: var(--shadow);
-    margin: 0 20px;
+  color: yellow;
+  text-shadow: var(--shadow);
+  margin: 0 20px;
 }
 
-#address a:hover{
-    color: red;
+#address a:hover {
+  color: red;
 }
 
 /*Footer*/
@@ -297,14 +292,14 @@ between the links.  Also, for them to line up more with the other content on the
 /*We wanted to play around with the text so we used a couple copy and paste codes for icons to be present in the goodbye image.  We also wanted to give some space between the top of our footer and the bottom of the previous section*/
 
 footer {
-    text-align: center;
-    background-color: var(--bookend);
-    text-shadow: var(--shadow);
-    margin-top: auto;
+  text-align: center;
+  background-color: var(--bookend);
+  text-shadow: var(--shadow);
+  margin-top: auto;
 }
 
 footer h3 {
-    text-shadow: var(--shadow);
+  text-shadow: var(--shadow);
 }
 
 /*Compatibility*/
@@ -313,64 +308,55 @@ footer h3 {
 
 /*As the screen kept getting bigger, would run into simliar issues as it got smaller, rows would just start being out of place, so instead, we told the system at a certain width to just change to this view and it will stay consistant.*/
 @media screen and (min-width: 2535px) {
+  main,
+  nav,
+  .topics {
+    flex-direction: column;
+  }
 
-    main,
-    nav,
-    .topics {
-        flex-direction: column;
-
-    }
-
-    .topics h2 {
-        border-right: none;
-        border-bottom: 3px solid var(--bookend);
-    }
-
+  .topics h2 {
+    border-right: none;
+    border-bottom: 3px solid var(--bookend);
+  }
 }
 
 /*This was the ideal viewing in my opinion. Didn't have to change much.*/
 
 @media screen and (max-width: 992px) {
-    header {
-        padding: 0 0 10px 0;
-        justify-content: center;
-        text-align: center;
-    }
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
 
-    header h1 {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 10px;
-        font-size: 10vw;
-    }
-
-
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
 }
 
 /*Everything at this size and smaller seemed to line up just fine.*/
 
 @media screen and (max-width: 768px) {
+  main,
+  nav,
+  .topics {
+    flex-direction: column;
+  }
 
-    main,
-    nav,
-    .topics {
-        flex-direction: column;
+  .flex-item,
+  .flex-item:first-child {
+    flex-basis: 100%;
+  }
 
-    }
-  
-    .flex-item,
-    .flex-item:first-child {
+  .flex-item:first-child {
+    min-height: 150px;
+  }
 
-        flex-basis: 100%;
-    }
-
-    .flex-item:first-child {
-        min-height: 150px;
-    }
-
-    .topics h2 {
-        border-right: none;
-        border-bottom: 3px solid var(--bookend);
-    }
-
+  .topics h2 {
+    border-right: none;
+    border-bottom: 3px solid var(--bookend);
+  }
 }
